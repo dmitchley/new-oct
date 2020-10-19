@@ -1,0 +1,58 @@
+<h5>{{welcomeMessage}}</h5>
+<div>
+    <div  class="col s12 m4 13 z-depth-2">
+
+
+<span style="text-align: center;"><h1>Match</h1></span>
+
+
+  <!-- Section: Contact -->
+  <section id="contact" class="section section-contact scrollspy">
+    <div >
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card-panel grey darken-3 white-text center">
+           <div class="match-title">
+{{match.teams.[0]}} vs. {{match.teams.[1]}} at {{match.time_london}}
+</div>
+          </div>
+         
+        </div>
+
+        
+        <div class="col s12 m6">
+         <div class="match-odds-cont">
+
+        {{#each betConfigs}}
+       <form action="/match/bet" method="POST">
+      {{!-- <input type="hidden" name="_csrf" value="{{csrfToken}}"> --}}
+      <input type="hidden" name="team" value="{{this.team}}">
+      <input type="hidden" name="matchId" value="{{this.matchId}}">
+      <button class="waves-effect grey darken-3 btn-large">
+        {{ this.teamLabel }}
+        {{ this.odds }}
+        {{ this.hasBet }}
+      </button>
+    </form>
+  {{/each}}
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+</div>
+</div>
+
+
+{{!-- Place your bets! Odds: --}}
+{{!-- 
+{{#each match.sites.[0].odds.h2h}}
+  <pre>
+    {{this}}
+  </pre>
+{{/each}} --}}

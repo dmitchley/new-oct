@@ -1,0 +1,34 @@
+button {
+    padding: 100px;
+}
+
+p {
+   margin: 10px 0 !important; 
+}
+
+.login-container {
+    width:400px; 
+    margin-top: 50px;
+    text-align: center;
+}
+
+tr:hover {
+    color: coral;
+}
+
+.match-odds-cont {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.match-title {
+    font-size: 17px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
